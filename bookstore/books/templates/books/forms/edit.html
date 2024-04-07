@@ -1,0 +1,16 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+<h2>Edit product </h2>
+<form method="post"  enctype="multipart/form-data">
+    {% csrf_token %}
+        {{form }}
+        <img src="{{form.instance.image_url}}"width="100px" height="100px">
+
+    <input type="submit" class="btn btn-success" >
+</form>
+<script src="{% static 'books/js/script.js'%}">
+
+
+</script>
+{%endblock %}

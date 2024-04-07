@@ -1,0 +1,21 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+<h2>Add new book via form </h2>
+<style>
+    .error-message {
+        color: red;
+    }
+</style>
+
+<form method="post"  enctype="multipart/form-data">
+    {% csrf_token %}
+        {{form }}
+
+    <input type="submit" class="btn btn-success">
+</form>
+<script src="{% static 'books/js/script.js'%}">
+
+
+</script>
+{%endblock %}

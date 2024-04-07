@@ -1,0 +1,21 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+    {% comment %} <h2>You must restart server after adding static folder </h2> {% endcomment %}
+<div class="card" style="width: 18rem;">
+  <td><img withd="200" height="200" src="{{book.image_url}}"></td>
+  {% comment %} <img src="{% static 'books/images/' %}{{book.image}}" class="card-img-top" alt="..."> {% endcomment %}
+  <div class="card-body">
+    <h5 class="card-title">{{book.title}}</h5>
+    <p class="card-text">Price : {{book.price}}</p>
+    <p class="card-text">No_of_page : {{book.no_of_page}}</p>
+    <p class="card-text">author : {{book.author}}</p>
+    <p class="card-text">created at : {{book.created_at}}</p>
+    <p class="card-text">updated at : {{book.updated_at}}</p>
+    <h4 class="card-text"> <a href="{{book.category.show_url}}">Category:{{book.category}} </a></h4>
+
+  {{product.show_url}}
+  </div>
+</div>
+
+{%endblock %}
